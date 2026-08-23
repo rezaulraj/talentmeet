@@ -10,6 +10,10 @@ import TestimonialReverse from "./TestimonialReverse";
 import PlanSection from "./PlanSection";
 import OrganizeSection from "./OrganizeSection";
 import Testimonial3 from "./Testimonial3";
+import CustomizationSection from "./Customization";
+import LoopSection from "./LoopSection";
+import PricingSection from "./PricingSection";
+import CTABanner from "./CTABanner";
 
 const Home = () => {
   return (
@@ -25,6 +29,10 @@ const Home = () => {
       <PlanSection />
       <OrganizeSection />
       <Testimonial3 />
+      <CustomizationSection />
+      <LoopSection />
+      <PricingSection />
+      <CTABanner />
     </div>
   );
 };

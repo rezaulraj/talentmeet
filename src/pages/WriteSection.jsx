@@ -1,5 +1,3 @@
-import React from "react";
-
 const ICONS = [
   {
     label: "Templates",
@@ -103,15 +101,13 @@ const ICONS = [
     ),
   },
 ];
-
+ 
 const WriteSection = () => {
   return (
     <section className="w-full px-4 py-10 sm:px-6 sm:py-16">
       <div className="mx-auto max-w-6xl overflow-hidden rounded-[28px] bg-gradient-to-br from-[#8fa2e8] to-[#a6b6ee] px-6 py-14 sm:rounded-[36px] sm:px-12 sm:py-20 md:px-16">
         <div className="grid items-center gap-16 md:grid-cols-2 md:gap-10">
-          {/* Left: stacked window mockups */}
           <div className="write-visual relative h-[300px] sm:h-[360px] md:h-[450px]">
-            {/* back window: Todo list */}
             <div className="absolute left-0 top-0 w-[78%] h-[78%] max-w-[340px] rounded-xl bg-white shadow-xl float-back">
               <div className="flex items-center gap-2 border-b border-neutral-100 px-4 py-3">
                 <span className="h-2 w-2 rounded-full bg-neutral-300" />
@@ -146,7 +142,6 @@ const WriteSection = () => {
               </div>
             </div>
 
-            {/* front window: Sourdough recipe */}
             <div className="absolute bottom-0 right-0 w-[82%] h-[92%] max-w-[380px] rounded-xl bg-[#fbe9d8] shadow-2xl float-front">
               <div className="flex items-center gap-2 border-b border-black/5 px-4 py-3">
                 <span className="h-2 w-2 rounded-full bg-black/10" />
@@ -191,7 +186,6 @@ const WriteSection = () => {
             </div>
           </div>
 
-          {/* Right: copy */}
           <div className="write-copy">
             <span className="text-[13px] font-semibold uppercase tracking-[0.12em] text-neutral-800/70">
               Write

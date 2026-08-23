@@ -39,7 +39,6 @@ const HeroHome = () => {
             className="w-full max-w-xs rounded-t-xl shadow-2xl"
           />
         </div>
-        {/* <div className="h-6 sm:h-10" /> */}
       </div>
     </section>
   );

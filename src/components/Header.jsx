@@ -15,16 +15,14 @@ const Header = () => {
   return (
     <header className="fixed left-0 top-0 z-50 w-full font-open-sans px-6 py-3 md:py-12">
       <div className="mx-auto flex max-w-5xl items-center justify-between rounded-full bg-linear-to-b from-primary-bg/50 to-white px-6 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-md backdrop-saturate-150 border border-white/30">
-        {/* Logo - left side */}
-        <div>
+        <a href="/" className="flex items-center gap-2">
           <img
             src="/telant.png"
             alt="Logo"
             className="h-10 w-20 rounded-md object-cover"
           />
-        </div>
+        </a>
 
-        {/* Nav links - center (desktop) */}
         <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
             <a
@@ -37,7 +35,6 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Right side - Contact button + Hamburger (mobile) */}
         <div className="flex items-center gap-4">
           <a
             href="#contact"
@@ -59,7 +56,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isMenuOpen && (
         <div className="absolute left-0 right-0 top-full mt-4 rounded-2xl bg-white/20 p-6 shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-md backdrop-saturate-150 border border-white/30 md:hidden">
           <nav className="flex flex-col gap-4">
