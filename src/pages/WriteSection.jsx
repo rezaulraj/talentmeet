@@ -196,7 +196,7 @@ const WriteSection = () => {
               to final form
             </h2>
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-neutral-800/80 sm:text-[16px]">
-              In Craft, your writing moves with you — capture ideas instantly
+              In Telent Meet, your writing moves with you — capture ideas instantly
               across all your devices, then refine them when you&rsquo;re ready.
               Transform quick iPhone notes into documents you&rsquo;re proud to
               share.

@@ -27,7 +27,7 @@ const HeroHome = () => {
         <div className="relative z-10 mt-10 hidden justify-center px-6 sm:mt-14 md:flex">
           <img
             src={heroscreenshotdestop}
-            alt="Craft app desktop preview"
+            alt="Telent Meet app desktop preview"
             className="w-full max-w-5xl rounded-t-xl shadow-2xl"
           />
         </div>
@@ -35,7 +35,7 @@ const HeroHome = () => {
         <div className="relative z-10 mt-8 flex justify-center px-6 md:hidden">
           <img
             src={heroscreenshotmobile}
-            alt="Craft app mobile preview"
+            alt="Telent Meet app mobile preview"
             className="w-full max-w-xs rounded-t-xl shadow-2xl"
           />
         </div>

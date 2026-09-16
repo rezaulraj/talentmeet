@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonial3 = ({
   name = "Deanna",
-  quote = "Craft is the one tool you need for everything — effortless organization, smooth navigation, and a workspace that adapts to your needs.",
+  quote = "Telent Meet is the one tool you need for everything — effortless organization, smooth navigation, and a workspace that adapts to your needs.",
   avatarSeed = "Tom",
 }) => {
   const avatarSrc = `https://randomuser.me/api/portraits/men/46.jpg`;

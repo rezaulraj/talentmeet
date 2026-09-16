@@ -124,7 +124,7 @@ const FeaturesRow = () => {
     <section className="w-full px-6 py-20 sm:py-28">
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="font-serif text-[28px] leading-[1.3] text-neutral-900 sm:text-[36px] md:text-[42px]">
-          Craft isn&rsquo;t just for one thing,
+          Telent Meet isn&rsquo;t just for one thing,
           <br />
           it&rsquo;s for <span className="italic">your</span> things.
         </h2>

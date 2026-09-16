@@ -264,10 +264,10 @@ const ImagineSection = () => {
             </span>
             <h2 className="mt-4 font-serif text-[34px] leading-[1.2] text-neutral-900 sm:text-[38px]">
               Imagine the possibilities when everything&rsquo;s connected to
-              Craft
+              Telent Meet
             </h2>
             <p className="mt-4 max-w-xs text-[14.5px] leading-relaxed text-neutral-900/75">
-              Make Craft yours — connect the tools you love, build what you
+              Make Telent Meet yours — connect the tools you love, build what you
               need.
             </p>
             <button className="imagine-btn mt-7 rounded-full bg-white/90 px-6 py-3 text-[14px] font-semibold text-neutral-900 shadow-sm">

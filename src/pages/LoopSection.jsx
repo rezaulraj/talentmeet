@@ -3,7 +3,7 @@ import cloudImage from "../assets/cloud.avif";
 
 const cards = [
   {
-    name: "r/CraftDocs",
+    name: "r/TelentMeet JobProtal",
     tagline: "Discuss, share, and explore",
     bg: "#ff5c1c",
     textColor: "#ffffff",
@@ -47,7 +47,7 @@ const cards = [
     ),
   },
   {
-    name: "@craftdocsapp",
+    name: "@telentmeettodoapp",
     tagline: "Stay up to date on our latest releases",
     bg: "#141414",
     textColor: "#ffffff",
@@ -65,7 +65,7 @@ const cards = [
     ),
   },
   {
-    name: "@CraftDocs",
+    name: "@telentmeet",
     tagline: "Tips, tutorials, and feature deep dives",
     bg: "#ffffff",
     textColor: "#1a1a1a",
@@ -102,7 +102,7 @@ const LoopSection = () => {
         </h2>
         <p className="mt-3 text-[14px] text-neutral-500 sm:text-[15px]">
           Join the community and learn how other people get the most out of
-          Craft.
+          Telent Meet.
         </p>
       </div>
 

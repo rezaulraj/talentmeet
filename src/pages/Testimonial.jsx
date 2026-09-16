@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonial = ({
   name = "Tom",
-  quote = "Publishing directly from Craft just feels natural — it's where I write, so it makes sense to share from there too.",
+  quote = "Publishing directly from Telent Meet just feels natural — it's where I write, so it makes sense to share from there too.",
   avatarSeed = "Tom",
 }) => {
   const avatarSrc = `https://randomuser.me/api/portraits/men/46.jpg`;

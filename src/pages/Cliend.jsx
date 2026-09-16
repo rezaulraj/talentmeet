@@ -91,7 +91,7 @@ const Client = () => {
   return (
     <section className="w-full overflow-hidden py-20">
       <h2 className="mb-14 text-center font-serif text-[32px] text-neutral-900 sm:text-[44px] md:text-[52px]">
-        How people use Craft
+        How people use Telent Meet
       </h2>
 
       <div className="relative">

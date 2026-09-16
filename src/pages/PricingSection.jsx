@@ -35,7 +35,7 @@ const PricingSection = () => {
         <div className="pricing-card relative flex flex-col overflow-hidden rounded-2xl bg-[#141414] p-8 shadow-[0_16px_30px_rgba(0,0,0,0.25)]">
           <div className="flex items-center gap-2">
             <span className="font-serif text-[18px] font-bold tracking-tight text-white">
-              CRAFT
+              Telent Meet
             </span>
             <span className="rounded-full bg-white px-2.5 py-1 text-[11px] font-bold text-neutral-900">
               PLUS

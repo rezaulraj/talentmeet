@@ -29,7 +29,7 @@ const PlanSection = () => {
               Planning that doesn&rsquo;t feel like work
             </h2>
             <p className="mt-4 max-w-xs text-[14.5px] leading-relaxed text-neutral-900/75">
-              Keep your ideas and tasks together where they belong. Craft embeds
+              Keep your ideas and tasks together where they belong. Telent Meet embeds
               tasks directly in your documents, keeping your best thinking
               connected to what needs to get done.
             </p>
@@ -195,7 +195,7 @@ const PlanSection = () => {
                 <div className="flex gap-2">
                   <span className="font-semibold text-[#c9973a]">17:10</span>
                   <span className="text-neutral-700">
-                    Check this Craft page
+                    Check this Telent Meet page
                   </span>
                 </div>
               </div>
