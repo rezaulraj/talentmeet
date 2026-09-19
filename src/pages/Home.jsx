@@ -1,6 +1,5 @@
 import React from "react";
 import HeroHome from "./HeroHome";
-import FeaturesRow from "./FeaturesRow";
 import Client from "./Cliend";
 import WriteSection from "./WriteSection";
 import Testimonial from "./Testimonial";
@@ -14,12 +13,15 @@ import CustomizationSection from "./Customization";
 import LoopSection from "./LoopSection";
 import PricingSection from "./PricingSection";
 import CTABanner from "./CTABanner";
+import ProductEcosystemGrid from "./ProductEcosystemGrid";
+import IntegrationLayer from "./IntegrationLayer";
 
 const Home = () => {
   return (
     <div>
       <HeroHome />
-      <FeaturesRow />
+      <ProductEcosystemGrid />
+      <IntegrationLayer />
       <Client />
       <WriteSection />
       <Testimonial />

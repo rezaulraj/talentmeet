@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 const NAV_LINKS = [
   "Product",
-  "Imagine",
-  "Community",
-  "Pricing",
-  "Learn",
-  "Download",
+  "Solutions",
+  "Resources",
+  "Company",
+  // "Learn",
+  // "Download",
 ];
 
 const Header = () => {
@@ -40,9 +40,15 @@ const Header = () => {
             href="#contact"
             className="rounded-full bg-neutral-900/90 px-5 py-2.5 text-[15px] font-semibold text-white transition-transform hover:scale-[1.03] active:scale-[0.98] backdrop-blur-sm"
           >
-            Contact
+            Talk to Sales
           </a>
 
+          <a
+            href="#contact"
+            className="rounded-full border border-neutral-900/90 px-5 py-2.5 font-medium text-neutral-800 transition-colors hover:text-neutral-950 backdrop-blur-sm"
+          >
+            Log in
+          </a>
           {/* Hamburger menu button - mobile */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}

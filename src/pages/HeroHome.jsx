@@ -16,11 +16,16 @@ const HeroHome = () => {
       >
         <div className="relative z-10 flex flex-col items-center px-6 pt-14 text-center sm:pt-20 md:pt-24">
           <h1 className="max-w-3xl text-[32px] font-serif leading-[1.15] text-neutral-900 sm:text-[44px] md:text-[56px]">
-            Your space for notes, tasks, and big ideas
+            One company. Ten tools. Every stage of work, covered.
           </h1>
-
-          <button className="mt-8 rounded-full bg-white px-7 py-3.5 text-[15px] font-semibold text-neutral-900 shadow-md transition-transform hover:scale-[1.03] active:scale-[0.98] sm:mt-10">
-            Try Telent Meet free
+          <p className="max-w-3xl mx-auto mt-10 text-neutral-900">
+            Talent Meet is the parent platform behind ten connected products —
+            for finding people, managing them, selling to your market, and
+            keeping every conversation secure. Built to work alone, or work
+            together.
+          </p>
+          <button className="mt-8 rounded-full bg-neutral-900 px-7 py-3.5 text-[15px] font-semibold text-white shadow-md transition-transform hover:scale-[1.03] active:scale-[0.98] sm:mt-10">
+            Talk to Sales
           </button>
         </div>
 
