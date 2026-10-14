@@ -34,8 +34,17 @@ const SmoothScroll = () => {
   }, []);
 
   useEffect(() => {
-    lenisRef.current?.scrollTo(0, { immediate: true });
-  }, [location.pathname]);
+    const lenis = lenisRef.current;
+    if (!location.hash) {
+      lenis?.scrollTo(0, { immediate: true });
+      return;
+    }
+    const id = requestAnimationFrame(() => {
+      const target = document.querySelector(location.hash);
+      if (target) lenis?.scrollTo(target, { offset: -80 });
+    });
+    return () => cancelAnimationFrame(id);
+  }, [location.pathname, location.hash]);
 
   return null;
 };

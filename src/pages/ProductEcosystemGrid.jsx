@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+import ProductCard from "../components/ProductCard";
+import { productHref } from "../data/products";
 
 /* ------------------------------------------------------------------ */
 /* Design tokens — one background, one accent                          */
@@ -140,26 +142,6 @@ const TabIconSecure = () => (
     <path d="M12 2.8 19.5 5.5v5.6c0 4.6-3.1 8.2-7.5 10.1-4.4-1.9-7.5-5.5-7.5-10.1V5.5L12 2.8Z" />
     <path d="m8.8 11.8 2.2 2.2 4.2-4.6" />
   </Svg>
-);
-
-const ArrowIcon = ({ nudge }) => (
-  <svg
-    viewBox="0 0 24 24"
-    width="16"
-    height="16"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-    style={{
-      transform: nudge ? "translateX(4px)" : "translateX(0)",
-      transition: `transform 300ms ${EASE}`,
-    }}
-  >
-    <path d="M4 12h15M13 6l6 6-6 6" />
-  </svg>
 );
 
 /* ------------------------------------------------------------------ */
@@ -404,112 +386,6 @@ const Tab = React.forwardRef(function Tab(
 });
 
 /* ------------------------------------------------------------------ */
-/* Card                                                                */
-/* ------------------------------------------------------------------ */
-
-const ProductCard = ({ product, delay }) => {
-  const [active, setActive] = useState(false);
-  const { name, description, Icon } = product;
-
-  return (
-    <li
-      className="eco-rise h-full"
-      style={{
-        listStyle: "none",
-        margin: 0,
-        padding: 0,
-        animationDelay: `${delay}ms`,
-      }}
-    >
-      <article
-        onMouseEnter={() => setActive(true)}
-        onMouseLeave={() => setActive(false)}
-        onFocus={() => setActive(true)}
-        onBlur={() => setActive(false)}
-        className="flex h-full flex-col"
-        style={{
-          background: "#FFFFFF",
-          borderRadius: 16,
-          padding: 24,
-          border: `1px solid ${active ? ACCENT : BG}`,
-          transform: active ? "translateY(-4px)" : "translateY(0)",
-          boxShadow: active
-            ? `0 18px 36px -20px ${ACCENT}80`
-            : "0 0 0 0 rgba(0,0,0,0)",
-          transition: `transform 320ms ${EASE}, border-color 240ms ease, box-shadow 320ms ${EASE}`,
-          fontFamily: SANS,
-        }}
-      >
-        {/* Icon tile */}
-        <span
-          className="flex items-center justify-center"
-          style={{
-            width: 48,
-            height: 48,
-            borderRadius: 12,
-            background: active ? ACCENT : "#F1F1F1",
-            color: active ? "#FFFFFF" : INK,
-            transition: "background-color 260ms ease, color 260ms ease",
-          }}
-        >
-          <Icon />
-        </span>
-
-        <h4
-          style={{
-            margin: "20px 0 0",
-            fontSize: 18,
-            lineHeight: 1.3,
-            fontWeight: 500,
-            color: INK,
-            letterSpacing: "-0.005em",
-          }}
-        >
-          {name}
-        </h4>
-
-        <p
-          style={{
-            margin: "8px 0 0",
-            fontSize: 15,
-            lineHeight: 1.55,
-            fontWeight: 400,
-            color: "rgba(3,3,2,0.72)",
-          }}
-        >
-          {description}
-        </p>
-
-        <a
-          href="#"
-          aria-label={`Learn more about ${name}`}
-          className="mt-auto inline-flex items-center gap-1.5 self-start"
-          style={{
-            paddingTop: 20,
-            fontSize: 15,
-            fontWeight: 500,
-            color: ACCENT,
-            textDecoration: "none",
-            borderRadius: 6,
-          }}
-        >
-          <span
-            style={{
-              textDecoration: active ? "underline" : "none",
-              textUnderlineOffset: 4,
-              textDecorationThickness: 1,
-            }}
-          >
-            Learn more
-          </span>
-          <ArrowIcon nudge={active} />
-        </a>
-      </article>
-    </li>
-  );
-};
-
-/* ------------------------------------------------------------------ */
 /* Section                                                             */
 /* ------------------------------------------------------------------ */
 
@@ -541,6 +417,7 @@ const ProductEcosystemGrid = () => {
 
   return (
     <section
+      id="products"
       aria-label="Product ecosystem"
       className="w-full px-6"
       style={{
@@ -661,6 +538,8 @@ const ProductEcosystemGrid = () => {
               <ProductCard
                 key={product.name}
                 product={product}
+                href={productHref(product.name.toLowerCase())}
+                accent={ACCENT}
                 delay={i * 80}
               />
             ))}

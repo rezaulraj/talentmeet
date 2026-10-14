@@ -1,6 +1,28 @@
 import React from "react";
 
-const CTABanner = () => {
+const Arrow = () => (
+  <svg
+    className="cta-arrow"
+    viewBox="0 0 16 16"
+    width="14"
+    height="14"
+    fill="none"
+    aria-hidden="true"
+  >
+    <path
+      d="M3 8h9.5M8.5 4l4 4-4 4"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const CTABanner = ({
+  salesHref = "/contact-sales",
+  walkthroughHref = "/request-walkthrough",
+}) => {
   return (
     <section className="w-full px-4 py-8 sm:px-6 sm:py-12">
       <div className="cta-banner relative mx-auto max-w-5xl overflow-hidden rounded-[24px] bg-[#7fc79a] px-6 py-9 shadow-[0_20px_45px_rgba(30,60,40,0.15)] sm:rounded-[28px] sm:px-10 sm:py-11">
@@ -9,6 +31,7 @@ const CTABanner = () => {
           viewBox="0 0 1000 220"
           preserveAspectRatio="none"
           fill="none"
+          aria-hidden="true"
         >
           <path
             d="M-40 60 C 150 10, 300 130, 480 70 S 780 -10, 1040 90"
@@ -36,36 +59,27 @@ const CTABanner = () => {
           />
         </svg>
 
-        <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-          <div className="cta-copy">
+        <div className="relative flex flex-col items-start justify-between gap-7 md:flex-row md:items-center md:gap-10">
+          <div className="cta-copy max-w-xl">
             <h2 className="font-serif text-[26px] italic leading-tight text-neutral-900 sm:text-[30px]">
-              Let&rsquo;s get started
+              Let&rsquo;s figure out which products you actually need.
             </h2>
-            <p className="mt-2 text-[14.5px] text-neutral-800/80 sm:text-[15px]">
-              Start for free. No credit card required.
+            <p className="mt-3 text-[14.5px] leading-relaxed text-neutral-800/80 sm:text-[15px]">
+              Every company uses Talent Meet differently &mdash; some need one
+              product, some need the whole suite. Talk to our team and
+              we&rsquo;ll scope the right setup for your size and stage, no
+              pressure and no obligation.
             </p>
           </div>
 
-          <div className="cta-buttons flex flex-col shrink-0 flex-wrap items-center gap-3">
-            <button className="cta-btn-light rounded-full bg-white/90 px-5 py-2.5 text-[13.5px] font-semibold text-neutral-900 shadow-sm">
-              Continue on web
-            </button>
-            <button className="cta-btn-dark flex items-center gap-2 rounded-full bg-neutral-900 px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-md">
-              Download on the
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none">
-                <rect
-                  x="7"
-                  y="2.5"
-                  width="10"
-                  height="17"
-                  rx="2.4"
-                  stroke="#fff"
-                  strokeWidth="1.4"
-                />
-                <circle cx="12" cy="16.7" r="0.9" fill="#fff" />
-              </svg>
-              App Store
-            </button>
+          <div className="cta-buttons flex w-full shrink-0 flex-col gap-3 sm:w-auto sm:flex-row md:flex-col">
+            <a
+              href={salesHref}
+              className="cta-btn-dark inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-[13.5px] font-semibold text-white shadow-md"
+            >
+              Talk to Sales
+              <Arrow />
+            </a>
           </div>
         </div>
       </div>
@@ -97,9 +111,20 @@ const CTABanner = () => {
         .cta-btn-light:active, .cta-btn-dark:active {
           transform: translateY(0) scale(0.98);
         }
+        .cta-btn-light:focus-visible, .cta-btn-dark:focus-visible {
+          outline: 2px solid #1a1a1a;
+          outline-offset: 3px;
+        }
+
+        .cta-arrow {
+          transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .cta-btn-light:hover .cta-arrow, .cta-btn-dark:hover .cta-arrow {
+          transform: translateX(3px);
+        }
 
         @media (prefers-reduced-motion: reduce) {
-          .cta-banner, .cta-copy, .cta-buttons, .cta-btn-light, .cta-btn-dark {
+          .cta-banner, .cta-copy, .cta-buttons, .cta-btn-light, .cta-btn-dark, .cta-arrow {
             animation: none !important;
             transition: none !important;
             opacity: 1;

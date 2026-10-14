@@ -22,7 +22,7 @@ const Home = () => {
       <HeroHome />
       <ProductEcosystemGrid />
       <IntegrationLayer />
-      <Client />
+      {/* <Client />
       <WriteSection />
       <Testimonial />
       <ImagineSection />
@@ -33,7 +33,7 @@ const Home = () => {
       <Testimonial3 />
       <CustomizationSection />
       <LoopSection />
-      <PricingSection />
+      <PricingSection /> */}
       <CTABanner />
     </div>
   );
