@@ -37,14 +37,14 @@ const LINK_GROUPS = [
       { label: "Contact", href: "/contact" },
     ],
   },
-  {
-    title: "Legal",
-    items: [
-      { label: "Terms", href: "/terms" },
-      { label: "Privacy", href: "/privacy" },
-      { label: "Security", href: "/security" },
-    ],
-  },
+  // {
+  //   title: "Legal",
+  //   items: [
+  //     { label: "Terms", href: "/terms" },
+  //     { label: "Privacy", href: "/privacy" },
+  //     { label: "Security", href: "/security" },
+  //   ],
+  // },
 ];
 
 const FooterLink = ({ href, children }) => (
@@ -102,6 +102,12 @@ const Footer = () => {
               move your company forward.
             </p>
             <a
+              href="mailto:info@talentmeet.eu"
+              className="mt-4 block text-[14px] text-neutral-600 "
+            >
+              info@talentmeet.eu
+            </a>
+            <a
               href="/contact-sales"
               className="footer-cta mt-6 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-md"
             >
@@ -148,7 +154,7 @@ const Footer = () => {
         </div>
 
         {/* Middle: link groups */}
-        <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 border-t border-neutral-200/80 pt-12 sm:grid-cols-4">
+        <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 border-t border-neutral-200/80 pt-12 sm:grid-cols-3">
           {LINK_GROUPS.map((group) => (
             <nav key={group.title} aria-label={group.title}>
               <ColumnHeading>{group.title}</ColumnHeading>
@@ -169,13 +175,13 @@ const Footer = () => {
             &copy; {year} Talent Meet. All rights reserved.
           </p>
           <div className="flex items-center gap-5 text-[13px] text-neutral-500">
-            <a href="/terms" className="footer-link">
+            <a href="#" className="footer-link">
               Terms
             </a>
-            <a href="/privacy" className="footer-link">
+            <a href="/#" className="footer-link">
               Privacy
             </a>
-            <a href="/security" className="footer-link">
+            <a href="/#" className="footer-link">
               Security
             </a>
           </div>
