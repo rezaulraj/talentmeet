@@ -11,6 +11,23 @@ const PRODUCT_CLUSTERS = CLUSTERS.map((cluster) => ({
   })),
 }));
 
+const CONTACT_EMAIL = "ceo@talentmeet.eu";
+
+const OFFICES = [
+  {
+    label: "London",
+    lines: ["7 Kirkdale House", "London, E11 1HP"],
+  },
+  {
+    label: "Dhaka",
+    lines: [
+      "Plot-34, H M Plaza, 4th Floor",
+      "Sector-03, Uttara",
+      "Dhaka-1229, Bangladesh",
+    ],
+  },
+];
+
 const LINK_GROUPS = [
   {
     title: "Solutions",
@@ -102,33 +119,28 @@ const Footer = () => {
               move your company forward.
             </p>
             <a
-              href="mailto:info@talentmeet.eu"
-              className="mt-4 block text-[14px] text-neutral-600 "
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="footer-link mt-4 block text-[14px] text-neutral-600"
             >
-              info@talentmeet.eu
+              {CONTACT_EMAIL}
             </a>
-            <a
-              href="/contact-sales"
-              className="footer-cta mt-6 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-md"
-            >
-              Talk to Sales
-              <svg
-                className="footer-arrow"
-                viewBox="0 0 16 16"
-                width="14"
-                height="14"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M3 8h9.5M8.5 4l4 4-4 4"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
+            <div className="mt-5 space-y-4">
+              {OFFICES.map((office) => (
+                <address
+                  key={office.label}
+                  className="text-[14px] not-italic leading-relaxed text-neutral-600"
+                >
+                  <span className="mb-0.5 block text-[11.5px] font-semibold uppercase tracking-[0.14em] text-neutral-900">
+                    {office.label}
+                  </span>
+                  {office.lines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </address>
+              ))}
+            </div>
           </div>
 
           <div className="lg:col-span-8">

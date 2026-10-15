@@ -598,12 +598,12 @@ const MobileMenu = ({ open, currentSlug, currentSolution, currentPath }) => {
         </nav>
 
         <div className="mt-2 grid grid-cols-2 gap-2 p-1">
-          <a
+          {/* <a
             href="#login"
             className="rounded-full border border-neutral-900/90 py-3 text-center text-[15px] font-medium text-neutral-900"
           >
             Log in
-          </a>
+          </a> */}
           <a
             href={SALES_HREF}
             className="rounded-full bg-neutral-900 py-3 text-center text-[15px] font-semibold text-white"
@@ -616,9 +616,6 @@ const MobileMenu = ({ open, currentSlug, currentSolution, currentPath }) => {
   );
 };
 
-/* ------------------------------------------------------------------ */
-/* Header                                                              */
-/* ------------------------------------------------------------------ */
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -761,12 +758,6 @@ const Header = () => {
             Talk to Sales
           </a>
 
-          <a
-            href="#login"
-            className="hidden rounded-full border border-neutral-900/90 px-5 py-2.5 font-medium text-neutral-800 backdrop-blur-sm transition-colors hover:bg-neutral-900 hover:text-white md:inline-flex"
-          >
-            Log in
-          </a>
 
           {/* Hamburger — mobile */}
           <button
